@@ -8,6 +8,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_sieve import Sieve
 from logging.config import dictConfig
 from .apis.student import studentApp
+from .apis.pokemon import pokemonApp
+
 
 # Create package object.
 db = SQLAlchemy()
@@ -50,5 +52,5 @@ def init_app(name, config=None):
     sieve.init_app(app)
     
     app.register_blueprint(studentApp)
-
+    app.register_blueprint(pokemonApp)
     return app
