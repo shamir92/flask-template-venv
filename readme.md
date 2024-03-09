@@ -9,9 +9,13 @@ Guidance for MacOS / Intel
 3. pip install flask-restful
 4. pip install Flask-SQLAlchemy
 5. pip install Flask-Migrate
+6. pip install requests
+
 
 Source : 
-1. Flask Web Site -> https://flask.palletsprojects.com/en/3.0.x/
-2. Flask Restful -> https://flask-restful.readthedocs.io/en/latest/
-3. Flask SQLAlchemy -> https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/
-4. Flask Migrate -> https://flask-migrate.readthedocs.io/en/latest/index.html
+1. Venv -> https://docs.python.org/3/library/venv.html
+2. Flask Web Site -> https://flask.palletsprojects.com/en/3.0.x/
+3. Flask Restful -> https://flask-restful.readthedocs.io/en/latest/
+4. Flask SQLAlchemy -> https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/
+5. Flask Migrate -> https://flask-migrate.readthedocs.io/en/latest/index.html
+6. Python Requests -> https://docs.python-requests.org/en/latest/index.html
