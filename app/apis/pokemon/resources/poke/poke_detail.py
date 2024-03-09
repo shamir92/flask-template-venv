@@ -17,8 +17,6 @@ class PokeDetail(Resource):
                 'name.alpha': 'Yikes! The name must be a string',
             }
             
-
-
             validator = Validator(rules=rules, messages=messages, request={'name': name})
             if validator.passes():
                 get_pokemon_name_url = f'https://pokeapi.co/api/v2/pokemon/{name}'

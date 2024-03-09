@@ -51,6 +51,9 @@ def init_app(name, config=None):
     CORS(app)
     sieve.init_app(app)
     
+    from .models.poke_review import PokeReview
+
+
     app.register_blueprint(studentApp)
     app.register_blueprint(pokemonApp)
     return app
