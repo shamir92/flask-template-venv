@@ -1,4 +1,5 @@
 import uuid
+from app import db
 
 class PokeReview(db.Model):
     __tablename__ = "poke_review"

@@ -7,8 +7,7 @@ from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 from flask_sieve import Sieve
 from logging.config import dictConfig
-from .apis.student import studentApp
-from .apis.pokemon import pokemonApp
+
 
 
 # Create package object.
@@ -51,9 +50,14 @@ def init_app(name, config=None):
     CORS(app)
     sieve.init_app(app)
     
+    # Import the models
+    # must register in here not outside of init_app.
     from .models.poke_review import PokeReview
 
-
+    # Register the blueprints
+    # must register in here not outside of init_app. 
+    from .apis.student import studentApp
+    from .apis.pokemon import pokemonApp
     app.register_blueprint(studentApp)
     app.register_blueprint(pokemonApp)
     return app
