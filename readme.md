@@ -26,3 +26,14 @@ Source :
 8. Flask Cors -> https://flask-cors.corydolphin.com/en/latest/index.html
 9. Flask Sieve -> https://github.com/codingedward/flask-sieve
 10. PyMysql ->  https://pypi.org/project/pymysql/
+
+
+cara install -> 
+1. python -m venv venv 
+2. pip install -r requirement.txt 
+3. activate the venv. 
+4. python run.py 
+5. use postmane with this type of curl -> 
+curl --location 'https://3590-108-137-176-194.ngrok-free.app/rcs/compare-data' \
+--form 'source=@"/Users/shamirhusein/Downloads/regframetemplate-v1_a4b2bb10-395a-11ed-a60a-09e37ac58e58-2024-03-31 (4).xlsx"' \
+--form 'compare=@"/Users/shamirhusein/Downloads/9. 240212_[CU P2] Administrasi Kependudukan_DGA_RevAA (1).xlsx"'

@@ -1,0 +1,313 @@
+[2024-04-01 11:14:13,204] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 11:14:13,204] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 12:30:27,013] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 12:30:27,013] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:04:41,673] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 28, in post
+    print(request.source)
+          ^^^^^^^^^^^^^^
+AttributeError: 'Request' object has no attribute 'source'
+
+[2024-04-01 13:04:41,673] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:04:41] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 13:05:53,698] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:05:53,698] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:06:02,939] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 28, in post
+    print(request.files.get(source))
+                            ^^^^^^
+NameError: name 'source' is not defined. Did you mean: 'Resource'?
+
+[2024-04-01 13:06:02,940] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:06:02] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 13:08:43,803] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:08:43,803] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:08:49,132] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:08:49] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 13:10:21,932] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:10:21,932] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:10:25,570] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:10:25] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 13:29:55,443] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:29:55,444] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:30:01,152] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/compat/_optional.py", line 135, in import_optional_dependency
+    module = importlib.import_module(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/miniconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'openpyxl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 31, in post
+    source_df = pd.read_excel(request.files['source'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1567, in __init__
+    self._reader = self._engines[engine](
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 552, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/compat/_optional.py", line 138, in import_optional_dependency
+    raise ImportError(msg)
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+
+[2024-04-01 13:30:01,152] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:30:01] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 13:30:32,578] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:30:32,578] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:30:36,820] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 33, in post
+    diff_df = compare_df.compare(source_df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 8580, in compare
+    return super().compare(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 10118, in compare
+    mask = ~((self == other) | (self.isna() & other.isna()))
+              ^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/arraylike.py", line 40, in __eq__
+    return self._cmp_method(other, operator.eq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 7884, in _cmp_method
+    self, other = self._align_for_op(other, axis, flex=False, level=None)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 8183, in _align_for_op
+    raise ValueError(
+ValueError: Can only compare identically-labeled (both index and columns) DataFrame objects
+
+[2024-04-01 13:30:36,820] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:30:36] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 13:31:47,407] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 33, in post
+    diff_df = compare_df.compare(source_df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 8580, in compare
+    return super().compare(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 10118, in compare
+    mask = ~((self == other) | (self.isna() & other.isna()))
+              ^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/arraylike.py", line 40, in __eq__
+    return self._cmp_method(other, operator.eq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 7884, in _cmp_method
+    self, other = self._align_for_op(other, axis, flex=False, level=None)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 8183, in _align_for_op
+    raise ValueError(
+ValueError: Can only compare identically-labeled (both index and columns) DataFrame objects
+
+[2024-04-01 13:31:47,408] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:31:47] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 13:31:53,666] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:31:53,667] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:31:56,177] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 33, in post
+    diff_df = compare_df.compare(source_df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 8580, in compare
+    return super().compare(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 10118, in compare
+    mask = ~((self == other) | (self.isna() & other.isna()))
+              ^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/arraylike.py", line 40, in __eq__
+    return self._cmp_method(other, operator.eq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 7884, in _cmp_method
+    self, other = self._align_for_op(other, axis, flex=False, level=None)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 8183, in _align_for_op
+    raise ValueError(
+ValueError: Can only compare identically-labeled (both index and columns) DataFrame objects
+
+[2024-04-01 13:31:56,177] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:31:56] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 13:51:11,905] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:51:11,905] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:51:18,675] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 37, in post
+    unique_rows_df = combined_df.reindex(idx)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 5365, in reindex
+    return super().reindex(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 5607, in reindex
+    return self._reindex_axes(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 5630, in _reindex_axes
+    new_index, indexer = ax.reindex(
+                         ^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 4429, in reindex
+    raise ValueError("cannot reindex on an axis with duplicate labels")
+ValueError: cannot reindex on an axis with duplicate labels
+
+[2024-04-01 13:51:18,675] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:51:18] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 13:55:51,190] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:55:51,190] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:55:56,140] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:55:56] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 13:56:36,760] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:56:36,760] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:56:40,326] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:56:40] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 13:59:37,107] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 13:59:37,107] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 13:59:40,688] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 13:59:40] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 14:14:39,850] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:14:39,850] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:14:45,220] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 40, in post
+    unique_rows_df = combined_df.reindex(idx)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 5365, in reindex
+    return super().reindex(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 5607, in reindex
+    return self._reindex_axes(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 5630, in _reindex_axes
+    new_index, indexer = ax.reindex(
+                         ^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 4429, in reindex
+    raise ValueError("cannot reindex on an axis with duplicate labels")
+ValueError: cannot reindex on an axis with duplicate labels
+
+[2024-04-01 14:14:45,221] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:14:45] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 14:15:23,327] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:15:23,327] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:15:26,645] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:15:26] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 14:17:20,547] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:17:20,547] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:17:25,560] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 47, in post
+    return send_file('my_data.xlsx')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/flask/helpers.py", line 499, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/werkzeug/utils.py", line 427, in send_file
+    stat = os.stat(path)
+           ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/my_data.xlsx'
+
+[2024-04-01 14:17:25,560] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:17:25] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 14:20:04,283] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:20:04,284] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:20:06,848] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:20:06] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 14:41:22,204] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:41:22,204] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:41:28,137] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 34, in post
+    combined_df = pd.concat([source_df, compare_df], ignore_index=True, indicator=True)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() got an unexpected keyword argument 'indicator'
+
+[2024-04-01 14:41:28,137] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:41:28] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 14:45:42,628] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:45:42,628] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:45:49,577] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: '_merge'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 37, in post
+    only_in_df2 = combined_df[combined_df['_merge'] == 'right_only']
+                              ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: '_merge'
+
+[2024-04-01 14:45:49,578] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:45:49] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 14:55:04,938] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:55:04,938] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:55:07,580] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 39, in post
+    df.to_excel('my_data.xlsx', index=False)
+    ^^
+NameError: name 'df' is not defined
+
+[2024-04-01 14:55:07,580] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:55:07] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-01 14:55:18,016] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-01 14:55:18,016] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:55:20,239] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:55:20] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-01 14:56:22,620] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:56:22] "POST /rcs/compare-data HTTP/1.1" 200 -

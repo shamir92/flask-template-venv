@@ -58,6 +58,8 @@ def init_app(name, config=None):
     # must register in here not outside of init_app. 
     from .apis.student import studentApp
     from .apis.pokemon import pokemonApp
+    from .apis.rcs_data import rcsApp
     app.register_blueprint(studentApp)
     app.register_blueprint(pokemonApp)
+    app.register_blueprint(rcsApp)
     return app
