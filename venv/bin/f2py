@@ -1,4 +1,4 @@
-#!/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/bin/python
+#!/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

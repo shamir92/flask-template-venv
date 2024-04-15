@@ -311,3 +311,1196 @@ NameError: name 'df' is not defined
 [2024-04-01 14:55:18,016] INFO in _internal: [33mPress CTRL+C to quit[0m
 [2024-04-01 14:55:20,239] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:55:20] "POST /rcs/compare-data HTTP/1.1" 200 -
 [2024-04-01 14:56:22,620] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 14:56:22] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-04 13:12:44,584] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-04 13:12:44,584] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 13:14:11,769] INFO in _internal: 127.0.0.1 - - [04/Apr/2024 13:14:11] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-04-04 13:14:15,610] INFO in _internal: 127.0.0.1 - - [04/Apr/2024 13:14:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-04-04 13:18:28,682] INFO in _internal: 127.0.0.1 - - [04/Apr/2024 13:18:28] "[33mGET /rcs/data HTTP/1.1[0m" 404 -
+[2024-04-04 13:18:34,296] INFO in _internal: 127.0.0.1 - - [04/Apr/2024 13:18:34] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-04 13:18:45,691] INFO in _internal: 127.0.0.1 - - [04/Apr/2024 13:18:45] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-04 13:19:49,337] INFO in _internal: 127.0.0.1 - - [04/Apr/2024 13:19:49] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 09:20:08,364] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 09:20:08,364] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 09:22:31,106] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 45, in post
+    merged_df = df1.merge(df2, how='outer', indicator=True)
+                ^^^
+NameError: name 'df1' is not defined
+
+[2024-04-05 09:22:31,106] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 09:22:31] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 09:23:40,504] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 09:23:40,504] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 09:23:45,193] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 45, in post
+    merged_df = source_df.merge(compare_df, how='outer', indicator=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10819, in merge
+    return merge(
+           ^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 170, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 807, in __init__
+    self._maybe_coerce_merge_keys()
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1508, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on object and float64 columns for key 'Notes'. If you wish to proceed you should use pd.concat
+
+[2024-04-05 09:23:45,194] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 09:23:45] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 09:32:16,363] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 09:32:16,363] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 09:32:35,678] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 48, in post
+    merged_df = source_df.merge(compare_df, how='outer', indicator=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10819, in merge
+    return merge(
+           ^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 170, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 807, in __init__
+    self._maybe_coerce_merge_keys()
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1508, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on float64 and object columns for key 'Update status'. If you wish to proceed you should use pd.concat
+
+[2024-04-05 09:32:35,678] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 09:32:35] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 09:33:43,695] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 09:33:43,695] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 09:33:46,559] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 52, in post
+    merged_df = source_df.merge(compare_df, how='outer', indicator=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10819, in merge
+    return merge(
+           ^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 170, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 807, in __init__
+    self._maybe_coerce_merge_keys()
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1508, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on float64 and object columns for key 'Update status'. If you wish to proceed you should use pd.concat
+
+[2024-04-05 09:33:46,560] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 09:33:46] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 09:36:40,213] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 09:36:40,213] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 09:36:43,016] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 52, in post
+    merged_df = source_df.merge(compare_df, how='outer', indicator=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10819, in merge
+    return merge(
+           ^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 170, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 807, in __init__
+    self._maybe_coerce_merge_keys()
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1508, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on float64 and object columns for key 'Update status'. If you wish to proceed you should use pd.concat
+
+[2024-04-05 09:36:43,017] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 09:36:43] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 09:44:28,499] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 09:44:28,499] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 09:44:31,577] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 09:44:31] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 09:45:29,872] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 09:45:29,872] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 09:45:33,566] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 09:45:33] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 10:02:11,727] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:02:11,727] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:02:19,217] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:02:19] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 10:21:58,801] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:21:58,801] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:22:04,394] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:22:04] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 10:29:19,772] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:29:19,772] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:29:25,344] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 101, in post
+    for column in df1.columns:
+                  ^^^
+NameError: name 'df1' is not defined
+
+[2024-04-05 10:29:25,344] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:29:25] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 10:29:49,747] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:29:49,747] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:29:52,262] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 102, in post
+    if all(source_df[column] == compare_df[column]):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/arraylike.py", line 40, in __eq__
+    return self._cmp_method(other, operator.eq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/series.py", line 6105, in _cmp_method
+    raise ValueError("Can only compare identically-labeled Series objects")
+ValueError: Can only compare identically-labeled Series objects
+
+[2024-04-05 10:29:52,262] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:29:52] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 10:34:31,507] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:34:31,507] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:34:38,466] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 105, in post
+    if all(source_df[column] == compare_df[column]):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/arraylike.py", line 40, in __eq__
+    return self._cmp_method(other, operator.eq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/series.py", line 6105, in _cmp_method
+    raise ValueError("Can only compare identically-labeled Series objects")
+ValueError: Can only compare identically-labeled Series objects
+
+[2024-04-05 10:34:38,466] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:34:38] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 10:54:19,266] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:54:19,266] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:54:24,271] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:54:24] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 10:55:06,029] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:55:06,029] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:55:12,470] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:55:12] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 10:55:25,914] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 10:55:25,914] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 10:55:29,365] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 10:55:29] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 11:48:35,974] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:48:35,974] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:48:41,160] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df.append(compare_row,ignore_index=True)
+    ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6296, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+
+[2024-04-05 11:48:41,160] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:48:41] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 11:51:00,840] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:51:00,840] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:51:05,629] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df.append(compare_row,ignore_index=True)
+    ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6296, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+
+[2024-04-05 11:51:05,629] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:51:05] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 11:52:13,456] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df.append(compare_row,ignore_index=True)
+    ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6296, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+
+[2024-04-05 11:52:13,456] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:52:13] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 11:52:23,693] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:52:23,693] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:52:26,336] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df.append(compare_row,ignore_index=True)
+    ^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6296, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+
+[2024-04-05 11:52:26,336] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:52:26] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 11:52:43,582] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:52:43,582] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:52:45,774] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df = pd.concat(result_df,compare_row)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat() takes 1 positional argument but 2 were given
+
+[2024-04-05 11:52:45,775] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:52:45] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 11:54:21,412] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:54:21,413] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:54:27,391] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:54:27] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 11:55:27,621] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:55:27,621] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:55:33,196] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:55:33] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 11:56:43,706] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:56:43,706] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:56:48,676] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:56:48] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 11:58:08,023] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 11:58:08,023] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 11:58:14,996] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df = pd.concat([result_df,compare_df.iloc(compare_index)],ignore_index=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 382, in concat
+    op = _Concatenator(
+         ^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 448, in __init__
+    ndims = self._get_ndims(objs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 489, in _get_ndims
+    raise TypeError(msg)
+TypeError: cannot concatenate object of type '<class 'pandas.core.indexing._iLocIndexer'>'; only Series and DataFrame objs are valid
+
+[2024-04-05 11:58:14,996] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 11:58:14] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:00:05,911] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:00:05,911] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:00:10,822] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df = pd.concat([result_df,compare_df.iloc(compare_index)],ignore_index=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 382, in concat
+    op = _Concatenator(
+         ^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 448, in __init__
+    ndims = self._get_ndims(objs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 489, in _get_ndims
+    raise TypeError(msg)
+TypeError: cannot concatenate object of type '<class 'pandas.core.indexing._iLocIndexer'>'; only Series and DataFrame objs are valid
+
+[2024-04-05 12:00:10,823] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:00:10] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:00:38,951] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:00:38,951] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:00:43,082] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 106, in post
+    result_df = pd.concat([result_df,compare_df.iloc(compare_index)],axis=1)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 382, in concat
+    op = _Concatenator(
+         ^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 448, in __init__
+    ndims = self._get_ndims(objs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 489, in _get_ndims
+    raise TypeError(msg)
+TypeError: cannot concatenate object of type '<class 'pandas.core.indexing._iLocIndexer'>'; only Series and DataFrame objs are valid
+
+[2024-04-05 12:00:43,082] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:00:43] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:01:14,862] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:01:14,862] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:01:20,908] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:01:20] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:04:08,149] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:04:08,149] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:04:13,846] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 100, in post
+    result_df = pd.DataFrame(index=0, columns=compare_df.columns)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 865, in __init__
+    mgr = dict_to_mgr(
+          ^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 450, in dict_to_mgr
+    index = ensure_index(index)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 7649, in ensure_index
+    return Index(index_like, copy=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 526, in __new__
+    raise cls._raise_scalar_data_error(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5289, in _raise_scalar_data_error
+    raise TypeError(
+TypeError: Index(...) must be called with a collection of some kind, 0 was passed
+
+[2024-04-05 12:04:13,846] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:04:13] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:04:27,834] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:04:27,834] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:04:29,626] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 100, in post
+    result_df = pd.DataFrame(index=1, columns=compare_df.columns)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 865, in __init__
+    mgr = dict_to_mgr(
+          ^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 450, in dict_to_mgr
+    index = ensure_index(index)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 7649, in ensure_index
+    return Index(index_like, copy=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 526, in __new__
+    raise cls._raise_scalar_data_error(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 5289, in _raise_scalar_data_error
+    raise TypeError(
+TypeError: Index(...) must be called with a collection of some kind, 1 was passed
+
+[2024-04-05 12:04:29,627] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:04:29] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:05:04,448] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:05:04,448] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:05:10,143] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:05:10] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:06:05,690] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:06:05,690] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:06:12,829] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:06:12] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:07:20,306] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:07:20,306] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:07:25,254] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:07:25] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:10:47,544] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:10:47,544] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:10:50,944] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 107, in post
+    result_df = pd.concat([result_df,selected_df],ignore_index=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 382, in concat
+    op = _Concatenator(
+         ^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 448, in __init__
+    ndims = self._get_ndims(objs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 489, in _get_ndims
+    raise TypeError(msg)
+TypeError: cannot concatenate object of type '<class 'pandas.core.indexing._iLocIndexer'>'; only Series and DataFrame objs are valid
+
+[2024-04-05 12:10:50,945] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:10:50] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:12:34,337] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:12:34,338] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:12:39,009] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 108, in post
+    result_df = pd.concat([result_df,selected_df],ignore_index=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 382, in concat
+    op = _Concatenator(
+         ^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 448, in __init__
+    ndims = self._get_ndims(objs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/reshape/concat.py", line 489, in _get_ndims
+    raise TypeError(msg)
+TypeError: cannot concatenate object of type '<class 'pandas.core.indexing._iLocIndexer'>'; only Series and DataFrame objs are valid
+
+[2024-04-05 12:12:39,009] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:12:39] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:13:41,078] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:13:41,079] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:13:43,820] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:13:43] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:14:55,488] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:14:55,488] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:14:57,984] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:14:57] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:16:11,726] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:16:11,726] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:16:17,424] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:16:17] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:17:22,783] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:17:22,783] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:17:25,011] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:17:25] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:18:03,687] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:18:03,687] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:18:05,611] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:18:05] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:19:45,749] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:19:45,749] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:19:52,790] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:19:52] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:20:34,438] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:20:34,438] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:20:36,789] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:20:36] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:20:43,274] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:20:43,274] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:20:45,523] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:20:45] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:21:45,956] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:21:45,956] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:21:49,466] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:21:49] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:22:24,453] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:22:24,453] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:22:26,537] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 108, in post
+    result_df = pd.concat([result_df,pd.DataFrame(compare_row.to_dict())],axis=1)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 767, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 667, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+
+[2024-04-05 12:22:26,537] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:22:26] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:22:41,562] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:22:41,562] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:22:43,459] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 108, in post
+    result_df = pd.concat([result_df,pd.DataFrame(compare_row.to_dict())],ignore_index=true)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 767, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 667, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+
+[2024-04-05 12:22:43,459] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:22:43] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:23:39,848] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:23:39,848] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:23:43,675] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 108, in post
+    result_df = pd.concat([result_df,pd.DataFrame(compare_row.to_dict(),index=[0])],ignore_index=true)
+                                                                                                 ^^^^
+NameError: name 'true' is not defined. Did you mean: 'True'?
+
+[2024-04-05 12:23:43,676] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:23:43] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:24:01,326] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:24:01,326] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:24:06,302] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:24:06] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:27:35,130] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:27:35,130] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:28:04,313] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:28:04,313] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:28:09,648] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:28:09] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:33:43,413] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:33:43,414] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:33:49,264] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 137, in post
+    if compare_row['Topik'] not in source_row["Topik"]:
+                                   ^^^^^^^^^^
+NameError: name 'source_row' is not defined. Did you mean: 'source_df'?
+
+[2024-04-05 12:33:49,264] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:33:49] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:34:20,784] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:34:20,784] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:34:25,033] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 137, in post
+    if compare_row['Topik'] not in source_df.loc["Topik"]:
+                                   ~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1431, in _getitem_axis
+    return self._get_label(key, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1381, in _get_label
+    return self.obj.xs(label, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 4298, in xs
+    loc = index.get_loc(key)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'Topik'
+
+[2024-04-05 12:34:25,033] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:34:25] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-05 12:37:01,101] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:37:01,101] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:37:08,118] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:37:08] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-05 12:39:44,959] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.8.0.2:5000
+[2024-04-05 12:39:44,959] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-05 12:39:51,206] INFO in _internal: 127.0.0.1 - - [05/Apr/2024 12:39:51] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-12 15:54:42,792] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-12 15:54:42,792] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-12 23:16:14,021] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-12 23:16:14,022] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-12 23:18:03,681] INFO in _internal: 127.0.0.1 - - [12/Apr/2024 23:18:03] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-12 23:25:01,828] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-12 23:25:01,828] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-12 23:25:07,942] INFO in _internal: 127.0.0.1 - - [12/Apr/2024 23:25:07] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-12 23:27:10,763] INFO in _internal: 127.0.0.1 - - [12/Apr/2024 23:27:10] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-12 23:33:37,734] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-12 23:33:37,734] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-12 23:34:47,569] INFO in _internal: 127.0.0.1 - - [12/Apr/2024 23:34:47] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 10:53:26,329] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 10:53:26,330] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 10:53:31,111] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 10:53:31] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-04-14 10:53:32,738] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 10:53:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-04-14 10:55:29,617] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 10:55:29] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:04:16,578] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:04:16] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:04:44,509] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:04:44] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:04:49,459] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:04:49] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:05:26,040] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 11:05:26,041] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 11:05:28,820] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:05:28] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:12:39,700] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 11:12:39,700] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 11:12:45,059] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 110, in post
+    print(source_set)
+          ^^^^^^^^^^
+NameError: name 'source_set' is not defined. Did you mean: 'source_df'?
+
+[2024-04-14 11:12:45,060] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:12:45] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 11:12:57,604] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 11:12:57,604] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 11:12:59,499] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:12:59] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:15:02,921] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 11:15:02,921] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 11:15:05,767] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:15:05] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:20:23,752] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 11:20:23,752] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 11:20:26,820] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:20:26] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 11:21:49,973] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 11:21:49,973] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 11:21:57,182] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 11:21:57] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 13:24:55,208] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:24:55,208] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:25:09,824] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 75, in post
+    source_df['hash'] = df.apply(hash_row, axis=1)
+                        ^^
+NameError: name 'df' is not defined
+
+[2024-04-14 13:25:09,824] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:25:09] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 13:25:39,492] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:25:39,493] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:25:44,477] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 75, in post
+    source_df['hash'] = source_df.apply(hash_row, axis=1)
+                                        ^^^^^^^^
+NameError: name 'hash_row' is not defined
+
+[2024-04-14 13:25:44,478] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:25:44] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 13:27:36,689] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:27:36,689] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:27:40,748] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 75, in post
+    source_df['hash'] = source_df.apply(hash_row, axis=1)
+                                        ^^^^^^^^
+NameError: name 'hash_row' is not defined
+
+[2024-04-14 13:27:40,748] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:27:40] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 13:27:57,101] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:27:57,102] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:28:00,207] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 75, in post
+    source_df['hash'] = source_df.apply(cls.hash_row, axis=1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10361, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CompareData.hash_row() takes 1 positional argument but 2 were given
+
+[2024-04-14 13:28:00,207] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:28:00] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 13:29:09,872] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:29:09,873] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:29:13,752] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:29:13] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 13:29:44,387] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:29:44,387] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:29:50,005] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:29:50] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 13:30:37,370] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:30:37,370] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:30:44,056] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'tag'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 67, in post
+    del source_df['tag']
+        ~~~~~~~~~^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 4503, in __delitem__
+    loc = self.axes[-1].get_loc(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'tag'
+
+[2024-04-14 13:30:44,056] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:30:44] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 13:31:05,886] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:31:05,886] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:31:09,488] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:31:09] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 13:33:35,414] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 13:33:35,414] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 13:33:39,491] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 13:33:39] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 19:10:51,300] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 19:10:51,301] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 19:13:42,920] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'kewajiban_uuid'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 46, in post
+    source_df.pop('kewajiban_uuid')
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 5806, in pop
+    return super().pop(item=item)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 946, in pop
+    result = self[item]
+             ~~~~^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'kewajiban_uuid'
+
+[2024-04-14 19:13:42,920] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 19:13:42] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 19:15:18,679] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 19:15:18,680] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 19:15:32,424] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 19:15:32,424] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 19:15:36,641] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Kewajiban'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 58, in post
+    del source_df['Kewajiban']
+        ~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 4503, in __delitem__
+    loc = self.axes[-1].get_loc(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Kewajiban'
+
+[2024-04-14 19:15:36,641] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 19:15:36] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 19:16:19,763] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 19:16:19,763] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 19:16:23,520] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 19:16:23] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 19:16:56,520] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 19:16:56,520] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 19:16:58,907] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 19:16:58] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 19:17:51,114] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 19:17:51] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 19:19:48,366] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 19:19:48] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 19:19:55,532] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 19:19:55,532] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 19:19:57,979] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 19:19:57] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 21:12:43,227] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 21:12:43,228] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 21:13:10,312] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Kewajiban'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 58, in post
+    del source_df['Kewajiban']
+        ~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 4503, in __delitem__
+    loc = self.axes[-1].get_loc(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Kewajiban'
+
+[2024-04-14 21:13:10,313] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 21:13:10] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 21:14:07,178] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 21:14:07] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 21:49:00,239] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 21:49:00,239] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 21:49:07,140] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 89, in post
+    source_df['hash'] = source_df.apply(lambda row: hash_multiple_columns(row, columns_to_hash), axis=1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10361, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 89, in <lambda>
+    source_df['hash'] = source_df.apply(lambda row: hash_multiple_columns(row, columns_to_hash), axis=1)
+                                                    ^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'hash_multiple_columns' is not defined
+
+[2024-04-14 21:49:07,140] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 21:49:07] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 21:49:49,232] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 21:49:49,232] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 21:49:54,752] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 89, in post
+    source_df['hash'] = source_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10361, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 89, in <lambda>
+    source_df['hash'] = source_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CompareData.hash_multiple_columns() missing 1 required positional argument: 'columns'
+
+[2024-04-14 21:49:54,752] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 21:49:54] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-14 22:52:03,502] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 22:52:03,503] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 22:52:08,733] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 22:52:08] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-14 22:55:27,348] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-14 22:55:27,349] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 22:55:35,469] INFO in _internal: 127.0.0.1 - - [14/Apr/2024 22:55:35] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-15 10:11:38,931] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:11:38,931] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:13:05,040] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 10:13:05] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-15 10:30:00,054] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:30:00,054] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:35:23,457] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:35:23,457] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:35:27,615] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Update status'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 125, in post
+    source_df['Update status'] = source_df['Update status'].astype(str)
+                                 ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Update status'
+
+[2024-04-15 10:35:27,615] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 10:35:27] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-15 10:35:58,854] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:35:58,855] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:36:02,283] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Update status'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 125, in post
+    source_df['Update status'] = source_df['Update status'].astype(str)
+                                 ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Update status'
+
+[2024-04-15 10:36:02,284] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 10:36:02] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-15 10:36:15,618] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:36:15,619] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:36:19,831] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'concat_update_judul'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 152, in post
+    compare_df['hash'] = compare_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 10361, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 152, in <lambda>
+    compare_df['hash'] = compare_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 21, in hash_multiple_columns
+    combined_string = ''.join(str(row[col]) for col in columns)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 21, in <genexpr>
+    combined_string = ''.join(str(row[col]) for col in columns)
+                                  ~~~^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/series.py", line 1112, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/series.py", line 1228, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'concat_update_judul'
+
+[2024-04-15 10:36:19,831] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 10:36:19] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-15 10:36:34,198] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:36:34,198] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:36:44,736] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:36:44,736] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:36:48,568] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'hash'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 155, in post
+    compare_df_non_matching = compare_df[~compare_df['hash'].isin(source_df['hash'])]
+                                          ~~~~~~~~~~^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'hash'
+
+[2024-04-15 10:36:48,569] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 10:36:48] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-15 10:37:18,433] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:37:18,433] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:37:23,316] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 10:37:23] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-15 10:43:50,102] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-15 10:43:50,102] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-15 10:44:12,133] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 10:44:12] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-15 11:04:46,483] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:04:46] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-04-15 11:04:48,482] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:04:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-04-15 11:04:51,775] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:04:51] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-15 11:05:09,588] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:05:09] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-15 11:05:41,027] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:05:41] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-15 11:05:47,428] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:05:47] "POST /rcs/compare-data HTTP/1.1" 200 -
