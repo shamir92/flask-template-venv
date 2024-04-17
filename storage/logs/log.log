@@ -1504,3 +1504,25 @@ KeyError: 'hash'
 [2024-04-15 11:05:09,588] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:05:09] "GET /rcs/compare-data HTTP/1.1" 200 -
 [2024-04-15 11:05:41,027] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:05:41] "GET /rcs/compare-data HTTP/1.1" 200 -
 [2024-04-15 11:05:47,428] INFO in _internal: 127.0.0.1 - - [15/Apr/2024 11:05:47] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-16 17:16:42,211] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-16 17:16:42,211] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-16 17:16:48,664] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:16:48] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-16 17:31:13,182] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-16 17:31:13,182] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-16 17:31:22,472] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:31:22] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-16 17:32:42,458] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:32:42] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-16 17:32:47,173] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:32:47] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-16 17:32:52,417] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-16 17:32:52,417] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-16 17:32:55,935] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:32:55] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-16 17:33:36,732] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:33:36] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-16 17:33:46,583] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:33:46] "POST /rcs/compare-data HTTP/1.1" 200 -

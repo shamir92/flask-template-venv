@@ -61,32 +61,32 @@ class CompareData(Resource):
 
                 # source_df['Update status'] = source_df['Update status'].astype(str)
                 source_df['Update Judul'] = source_df['Update Judul'].astype(str).str.strip()
-                # source_df['concat_update_judul'] = source_df['Update Judul'].str.lower()
-                # source_df['concat_update_judul'] = source_df['concat_update_judul'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_judul'] = source_df['Update Judul'].str.lower()
+                source_df['concat_update_judul'] = source_df['concat_update_judul'].str.replace(r'\s+', '', regex=True)
 
                 # source_df['Update Notes'] = source_df['Update Notes'].astype(str)
                 source_df['Update Tipe Kewajiban'] = source_df['Update Tipe Kewajiban'].astype(str).str.strip()
-                # source_df['concat_update_tipe_kewajiban'] = source_df['Update Tipe Kewajiban'].str.lower()
-                # source_df['concat_update_tipe_kewajiban'] = source_df['concat_update_tipe_kewajiban'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_tipe_kewajiban'] = source_df['Update Tipe Kewajiban'].str.lower()
+                source_df['concat_update_tipe_kewajiban'] = source_df['concat_update_tipe_kewajiban'].str.replace(r'\s+', '', regex=True)
                 
                 source_df['Update Sanksi'] = source_df['Update Sanksi'].astype(str).str.strip()
-                # source_df['concat_update_sanksi'] = source_df['Update Sanksi'].str.lower()
-                # source_df['concat_update_sanksi'] = source_df['concat_update_sanksi'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_sanksi'] = source_df['Update Sanksi'].str.lower()
+                source_df['concat_update_sanksi'] = source_df['concat_update_sanksi'].str.replace(r'\s+', '', regex=True)
 
                 source_df['Update Checklist'] = source_df['Update Checklist'].astype(str).str.strip()
-                # source_df['concat_update_checklist'] = source_df['Update Checklist'].str.lower()
-                # source_df['concat_update_checklist'] = source_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_checklist'] = source_df['Update Checklist'].str.lower()
+                source_df['concat_update_checklist'] = source_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
 
                 source_df['Update peraturan_kewajiban'] = source_df['Update peraturan_kewajiban'].astype(str).str.strip()
-                # source_df['concat_update_peraturan_kewajiban'] = source_df['Update peraturan_kewajiban'].str.lower()
-                # source_df['concat_update_peraturan_kewajiban'] = source_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_peraturan_kewajiban'] = source_df['Update peraturan_kewajiban'].str.lower()
+                source_df['concat_update_peraturan_kewajiban'] = source_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
 
                 source_df['Update peraturan_sanksi'] = source_df['Update peraturan_sanksi'].astype(str).str.strip()
-                # source_df['concat_update_peraturan_sanksi'] = source_df['Update peraturan_sanksi'].str.lower()
-                # source_df['concat_update_peraturan_sanksi'] = source_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_peraturan_sanksi'] = source_df['Update peraturan_sanksi'].str.lower()
+                source_df['concat_update_peraturan_sanksi'] = source_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
 
-                source_df['hash'] = source_df.apply(cls.hash_row, axis=1)
-                # source_df['hash'] = source_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
+                # source_df['hash'] = source_df.apply(cls.hash_row, axis=1)
+                source_df['hash'] = source_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
                 # source_df['Tag'] = source_df['Tag'].astype(str)
                 # source_df['source'] = source_df['source'].astype(str)
 
@@ -124,32 +124,32 @@ class CompareData(Resource):
 
                 # source_df['Update status'] = source_df['Update status'].astype(str)
                 compare_df['Update Judul'] = compare_df['Update Judul'].astype(str).str.strip()
-                # compare_df['concat_update_judul'] = compare_df['Update Judul'].str.lower()
-                # compare_df['concat_update_judul'] = compare_df['concat_update_judul'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_judul'] = compare_df['Update Judul'].str.lower()
+                compare_df['concat_update_judul'] = compare_df['concat_update_judul'].str.replace(r'\s+', '', regex=True)
 
                 # source_df['Update Notes'] = source_df['Update Notes'].astype(str)
                 compare_df['Update Tipe Kewajiban'] = compare_df['Update Tipe Kewajiban'].astype(str).str.strip()
-                # compare_df['concat_update_tipe_kewajiban'] = compare_df['Update Tipe Kewajiban'].str.lower()
-                # compare_df['concat_update_tipe_kewajiban'] = compare_df['concat_update_tipe_kewajiban'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_tipe_kewajiban'] = compare_df['Update Tipe Kewajiban'].str.lower()
+                compare_df['concat_update_tipe_kewajiban'] = compare_df['concat_update_tipe_kewajiban'].str.replace(r'\s+', '', regex=True)
                 
                 compare_df['Update Sanksi'] = compare_df['Update Sanksi'].astype(str).str.strip()
-                # compare_df['concat_update_sanksi'] = compare_df['Update Sanksi'].str.lower()
-                # compare_df['concat_update_sanksi'] = compare_df['concat_update_sanksi'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_sanksi'] = compare_df['Update Sanksi'].str.lower()
+                compare_df['concat_update_sanksi'] = compare_df['concat_update_sanksi'].str.replace(r'\s+', '', regex=True)
 
                 compare_df['Update Checklist'] = compare_df['Update Checklist'].astype(str).str.strip()
-                # compare_df['concat_update_checklist'] = compare_df['Update Checklist'].str.lower()
-                # compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_checklist'] = compare_df['Update Checklist'].str.lower()
+                compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
 
                 compare_df['Update peraturan_kewajiban'] = compare_df['Update peraturan_kewajiban'].astype(str).str.strip()
-                # compare_df['concat_update_peraturan_kewajiban'] = compare_df['Update peraturan_kewajiban'].str.lower()
-                # compare_df['concat_update_peraturan_kewajiban'] = compare_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_peraturan_kewajiban'] = compare_df['Update peraturan_kewajiban'].str.lower()
+                compare_df['concat_update_peraturan_kewajiban'] = compare_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
 
                 compare_df['Update peraturan_sanksi'] = compare_df['Update peraturan_sanksi'].astype(str).str.strip()
-                # compare_df['concat_update_peraturan_sanksi'] = compare_df['Update peraturan_sanksi'].str.lower()
-                # compare_df['concat_update_peraturan_sanksi'] = compare_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_peraturan_sanksi'] = compare_df['Update peraturan_sanksi'].str.lower()
+                compare_df['concat_update_peraturan_sanksi'] = compare_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
 
-                compare_df['hash'] = compare_df.apply(cls.hash_row, axis=1)
-                # compare_df['hash'] = compare_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
+                # compare_df['hash'] = compare_df.apply(cls.hash_row, axis=1)
+                compare_df['hash'] = compare_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
 
 
                 compare_df_non_matching = compare_df[~compare_df['hash'].isin(source_df['hash'])]
