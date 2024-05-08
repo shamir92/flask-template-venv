@@ -55,7 +55,10 @@ class CompareData(Resource):
                 del source_df['peraturan_sanksi']
                 del source_df['Tag']
                 del source_df['kewajiban_uuid']
-                del source_df['Latest Publish']
+
+                if hasattr(source_df, 'Latest Publish'):
+                    del source_df['Latest Publish'] 
+                
                 del source_df['Update status']
                 del source_df['Update Notes']
 
@@ -76,14 +79,17 @@ class CompareData(Resource):
                 source_df['Update Checklist'] = source_df['Update Checklist'].astype(str).str.strip()
                 source_df['concat_update_checklist'] = source_df['Update Checklist'].str.lower()
                 source_df['concat_update_checklist'] = source_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_checklist'] = source_df['concat_update_checklist'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 source_df['Update peraturan_kewajiban'] = source_df['Update peraturan_kewajiban'].astype(str).str.strip()
                 source_df['concat_update_peraturan_kewajiban'] = source_df['Update peraturan_kewajiban'].str.lower()
                 source_df['concat_update_peraturan_kewajiban'] = source_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_peraturan_kewajiban'] = source_df['concat_update_peraturan_kewajiban'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 source_df['Update peraturan_sanksi'] = source_df['Update peraturan_sanksi'].astype(str).str.strip()
                 source_df['concat_update_peraturan_sanksi'] = source_df['Update peraturan_sanksi'].str.lower()
                 source_df['concat_update_peraturan_sanksi'] = source_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_peraturan_sanksi'] = source_df['concat_update_peraturan_sanksi'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 # source_df['hash'] = source_df.apply(cls.hash_row, axis=1)
                 source_df['hash'] = source_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
@@ -108,7 +114,8 @@ class CompareData(Resource):
                 del compare_df['peraturan_sanksi']
                 del compare_df['Tag']
                 del compare_df['kewajiban_uuid']     
-                del compare_df['Latest Publish']
+                if hasattr(compare_df, 'Latest Publish'):
+                    del compare_df['Latest Publish'] 
                 del compare_df['Update status']
                 del compare_df['Update Notes']
 
@@ -131,22 +138,27 @@ class CompareData(Resource):
                 compare_df['Update Tipe Kewajiban'] = compare_df['Update Tipe Kewajiban'].astype(str).str.strip()
                 compare_df['concat_update_tipe_kewajiban'] = compare_df['Update Tipe Kewajiban'].str.lower()
                 compare_df['concat_update_tipe_kewajiban'] = compare_df['concat_update_tipe_kewajiban'].str.replace(r'\s+', '', regex=True)
+
                 
                 compare_df['Update Sanksi'] = compare_df['Update Sanksi'].astype(str).str.strip()
                 compare_df['concat_update_sanksi'] = compare_df['Update Sanksi'].str.lower()
                 compare_df['concat_update_sanksi'] = compare_df['concat_update_sanksi'].str.replace(r'\s+', '', regex=True)
 
+
                 compare_df['Update Checklist'] = compare_df['Update Checklist'].astype(str).str.strip()
                 compare_df['concat_update_checklist'] = compare_df['Update Checklist'].str.lower()
                 compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 compare_df['Update peraturan_kewajiban'] = compare_df['Update peraturan_kewajiban'].astype(str).str.strip()
                 compare_df['concat_update_peraturan_kewajiban'] = compare_df['Update peraturan_kewajiban'].str.lower()
                 compare_df['concat_update_peraturan_kewajiban'] = compare_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_peraturan_kewajiban'] = compare_df['concat_update_peraturan_kewajiban'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 compare_df['Update peraturan_sanksi'] = compare_df['Update peraturan_sanksi'].astype(str).str.strip()
                 compare_df['concat_update_peraturan_sanksi'] = compare_df['Update peraturan_sanksi'].str.lower()
                 compare_df['concat_update_peraturan_sanksi'] = compare_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_peraturan_sanksi'] = compare_df['concat_update_peraturan_sanksi'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 # compare_df['hash'] = compare_df.apply(cls.hash_row, axis=1)
                 compare_df['hash'] = compare_df.apply(lambda row: cls.hash_multiple_columns(row, columns_to_hash), axis=1)
@@ -160,6 +172,7 @@ class CompareData(Resource):
                 # del compare_df_non_matching['concat_update_tipe_kewajiban']
                 # del compare_df_non_matching['concat_update_judul'] 
                 print(compare_df_non_matching)
+                source_df.to_excel("source.xlsx")
                 compare_df_non_matching.to_excel('my_data.xlsx')
                 return send_file('../my_data.xlsx')
             response = {

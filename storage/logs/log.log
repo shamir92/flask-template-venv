@@ -1526,3 +1526,476 @@ KeyError: 'hash'
 [2024-04-16 17:32:55,935] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:32:55] "POST /rcs/compare-data HTTP/1.1" 200 -
 [2024-04-16 17:33:36,732] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:33:36] "POST /rcs/compare-data HTTP/1.1" 200 -
 [2024-04-16 17:33:46,583] INFO in _internal: 127.0.0.1 - - [16/Apr/2024 17:33:46] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 17:18:03,463] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-19 17:18:03,463] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-19 17:41:23,226] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-19 17:41:23,227] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-19 17:42:01,484] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:42:01] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-04-19 17:42:03,564] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:42:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-04-19 17:42:13,684] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:42:13] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 17:42:25,016] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:42:25] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 17:43:25,211] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:43:25] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 17:49:46,398] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Topik'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 48, in post
+    source_df['Topik'] = source_df['Topik'].astype(str).str.strip()
+                         ~~~~~~~~~^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Topik'
+
+[2024-04-19 17:49:46,398] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:49:46] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 17:50:44,351] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Topik'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 93, in post
+    compare_df['Topik'] = compare_df['Topik'].astype(str).str.strip()
+                          ~~~~~~~~~~^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Topik'
+
+[2024-04-19 17:50:44,352] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:50:44] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 17:53:20,248] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Topik'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 93, in post
+    compare_df['Topik'] = compare_df['Topik'].astype(str).str.strip()
+                          ~~~~~~~~~~^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Topik'
+
+[2024-04-19 17:53:20,248] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:53:20] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 17:55:54,790] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:55:54] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 17:55:57,763] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:55:57] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 17:56:05,508] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:56:05] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 17:57:22,832] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 17:57:22] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 18:08:22,285] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 18:08:22] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 18:08:40,829] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 18:08:40] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 18:42:25,661] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-19 18:42:25,661] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-19 18:42:32,654] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 163, in post
+    source_df.to_excel()
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: NDFrame.to_excel() missing 1 required positional argument: 'excel_writer'
+
+[2024-04-19 18:42:32,655] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 18:42:32] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 18:42:51,967] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-19 18:42:51,967] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-19 18:42:57,387] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 18:42:57] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 18:43:30,229] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 18:43:30] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 18:59:26,018] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Topik'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 48, in post
+    source_df['Topik'] = source_df['Topik'].astype(str).str.strip()
+                         ~~~~~~~~~^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Topik'
+
+[2024-04-19 18:59:26,019] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 18:59:26] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 19:00:57,024] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:00:57] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 19:05:28,134] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Latest Publish'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 111, in post
+    del compare_df['Latest Publish']
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 4503, in __delitem__
+    loc = self.axes[-1].get_loc(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Latest Publish'
+
+[2024-04-19 19:05:28,134] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:05:28] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 19:06:42,877] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Latest Publish'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 111, in post
+    del compare_df['Latest Publish']
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 4503, in __delitem__
+    loc = self.axes[-1].get_loc(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Latest Publish'
+
+[2024-04-19 19:06:42,877] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:06:42] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 19:12:27,601] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-19 19:12:27,601] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-19 19:12:35,436] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 59, in post
+    if hasattr(source_df, source_df['Latest Publish']):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: attribute name must be string, not 'Series'
+
+[2024-04-19 19:12:35,436] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:12:35] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 19:13:15,503] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-04-19 19:13:15,504] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-19 19:13:19,243] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:13:19] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 19:15:54,378] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:15:54] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 19:33:15,327] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:33:15] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 19:41:36,042] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:41:36] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 19:53:31,761] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:53:31] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 19:56:53,917] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:56:53] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 19:59:57,067] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 19:59:57] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 20:05:46,180] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 20:05:46] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 20:06:00,109] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 20:06:00] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 20:09:41,196] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 20:09:41] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 20:14:17,970] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 44, in post
+    compare_df = pd.read_excel(request.files['compare'])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 508, in read_excel
+    data = io.parse(
+           ^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1616, in parse
+    return self._reader.parse(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 778, in parse
+    data = self.get_sheet_data(sheet, file_rows_needed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 615, in get_sheet_data
+    for row_number, row in enumerate(sheet.rows):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_read_only.py", line 81, in _cells_by_row
+    for idx, row in parser.parse():
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_reader.py", line 163, in parse
+    obj = prop[1].from_tree(element)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 103, in from_tree
+    return cls(**attrib)
+           ^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 184, in __init__
+    self.val = val
+    ^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 165, in __set__
+    raise ValueError("Value must be either numerical or a string containing a wildcard")
+ValueError: Value must be either numerical or a string containing a wildcard
+
+[2024-04-19 20:14:17,970] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 20:14:17] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 20:17:19,542] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 44, in post
+    compare_df = pd.read_excel(request.files['compare'])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 508, in read_excel
+    data = io.parse(
+           ^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1616, in parse
+    return self._reader.parse(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 778, in parse
+    data = self.get_sheet_data(sheet, file_rows_needed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 615, in get_sheet_data
+    for row_number, row in enumerate(sheet.rows):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_read_only.py", line 81, in _cells_by_row
+    for idx, row in parser.parse():
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_reader.py", line 163, in parse
+    obj = prop[1].from_tree(element)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 103, in from_tree
+    return cls(**attrib)
+           ^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 184, in __init__
+    self.val = val
+    ^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 165, in __set__
+    raise ValueError("Value must be either numerical or a string containing a wildcard")
+ValueError: Value must be either numerical or a string containing a wildcard
+
+[2024-04-19 20:17:19,542] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 20:17:19] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-04-19 20:18:23,432] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 20:18:23] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-04-19 20:19:18,198] INFO in _internal: 127.0.0.1 - - [19/Apr/2024 20:19:18] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 17:40:43,182] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 17:40:43,183] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 17:48:29,412] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 17:48:29,412] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 18:11:52,603] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 18:11:52,603] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 18:13:57,410] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:13:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-05-08 18:13:58,009] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:13:58] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-05-08 18:14:08,500] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:14:08] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-05-08 18:14:25,490] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:14:25] "[33mGET /compare-data HTTP/1.1[0m" 404 -
+[2024-05-08 18:14:30,814] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:14:30] "[33mPOST /compare-data HTTP/1.1[0m" 404 -
+[2024-05-08 18:14:40,646] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:14:40] "[33mPOST /compare-data HTTP/1.1[0m" 404 -
+[2024-05-08 18:14:50,476] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:14:50] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-05-08 18:30:47,137] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 44, in post
+    compare_df = pd.read_excel(request.files['compare'])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 508, in read_excel
+    data = io.parse(
+           ^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1616, in parse
+    return self._reader.parse(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 778, in parse
+    data = self.get_sheet_data(sheet, file_rows_needed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 615, in get_sheet_data
+    for row_number, row in enumerate(sheet.rows):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_read_only.py", line 81, in _cells_by_row
+    for idx, row in parser.parse():
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_reader.py", line 163, in parse
+    obj = prop[1].from_tree(element)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 103, in from_tree
+    return cls(**attrib)
+           ^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 184, in __init__
+    self.val = val
+    ^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 165, in __set__
+    raise ValueError("Value must be either numerical or a string containing a wildcard")
+ValueError: Value must be either numerical or a string containing a wildcard
+
+[2024-05-08 18:30:47,139] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:30:47] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-05-08 18:31:50,211] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 148, in post
+    compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'@\lt\w{13}', '', regex=True)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/strings/accessor.py", line 137, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/strings/accessor.py", line 1567, in replace
+    result = self._data.array._str_replace(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/strings/object_array.py", line 172, in _str_replace
+    pat = re.compile(pat, flags=flags)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/__init__.py", line 228, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/__init__.py", line 307, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_compiler.py", line 745, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 979, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 544, in _parse
+    code = _escape(source, this, state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 443, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+re.error: bad escape \l at position 1
+
+[2024-05-08 18:31:50,212] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:31:50] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-05-08 18:32:03,343] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 148, in post
+    compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'@\lt\w{13}', '', regex=True)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/strings/accessor.py", line 137, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/strings/accessor.py", line 1567, in replace
+    result = self._data.array._str_replace(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/core/strings/object_array.py", line 172, in _str_replace
+    pat = re.compile(pat, flags=flags)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/__init__.py", line 228, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/__init__.py", line 307, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_compiler.py", line 745, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 979, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 460, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 544, in _parse
+    code = _escape(source, this, state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/re/_parser.py", line 443, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+re.error: bad escape \l at position 1
+
+[2024-05-08 18:32:03,344] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:32:03] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-05-08 18:34:30,537] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 18:34:30,537] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 18:36:10,253] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 18:36:10,253] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 18:36:19,382] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:36:19] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 18:37:15,002] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 18:37:15,002] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 18:37:21,171] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:37:21] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 18:37:26,823] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 18:37:26,824] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 18:37:32,860] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:37:32] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 18:38:31,536] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 18:38:31,536] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 18:38:36,744] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:38:36] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 18:38:40,538] INFO in _internal: 127.0.0.1 - - [08/May/2024 18:38:40] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 20:04:27,216] INFO in _internal: 127.0.0.1 - - [08/May/2024 20:04:27] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 20:05:36,469] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 20:05:36,469] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 20:05:49,340] INFO in _internal: 127.0.0.1 - - [08/May/2024 20:05:49] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-08 20:06:04,842] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-08 20:06:04,842] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-08 20:06:12,323] INFO in _internal: 127.0.0.1 - - [08/May/2024 20:06:12] "POST /rcs/compare-data HTTP/1.1" 200 -
