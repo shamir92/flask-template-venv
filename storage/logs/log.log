@@ -1999,3 +1999,63 @@ re.error: bad escape \l at position 1
  * Running on http://192.168.1.20:5000
 [2024-05-08 20:06:04,842] INFO in _internal: [33mPress CTRL+C to quit[0m
 [2024-05-08 20:06:12,323] INFO in _internal: 127.0.0.1 - - [08/May/2024 20:06:12] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-13 14:37:56,055] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+[2024-05-13 14:37:56,056] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-13 14:44:38,830] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.20:8080
+[2024-05-13 14:44:38,831] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-05-13 14:51:32,582] INFO in _internal: 127.0.0.1 - - [13/May/2024 14:51:32] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-05-13 14:51:32,818] INFO in _internal: 127.0.0.1 - - [13/May/2024 14:51:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-05-13 14:51:34,966] INFO in _internal: 127.0.0.1 - - [13/May/2024 14:51:34] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-05-13 14:51:42,442] INFO in _internal: 127.0.0.1 - - [13/May/2024 14:51:42] "GET /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-13 14:54:55,339] INFO in _internal: 127.0.0.1 - - [13/May/2024 14:54:55] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-13 15:16:33,655] ERROR in data: Traceback (most recent call last):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/app/apis/rcs_data/resources/compare/data.py", line 44, in post
+    compare_df = pd.read_excel(request.files['compare'])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 508, in read_excel
+    data = io.parse(
+           ^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1616, in parse
+    return self._reader.parse(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 778, in parse
+    data = self.get_sheet_data(sheet, file_rows_needed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 615, in get_sheet_data
+    for row_number, row in enumerate(sheet.rows):
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_read_only.py", line 81, in _cells_by_row
+    for idx, row in parser.parse():
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/_reader.py", line 163, in parse
+    obj = prop[1].from_tree(element)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 87, in from_tree
+    obj = desc.expected_type.from_tree(el)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/descriptors/serialisable.py", line 103, in from_tree
+    return cls(**attrib)
+           ^^^^^^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 184, in __init__
+    self.val = val
+    ^^^^^^^^
+  File "/home/rani/Documents/code/enterprise-solution/rcs-data-comparison/version-two/venv/lib/python3.12/site-packages/openpyxl/worksheet/filters.py", line 165, in __set__
+    raise ValueError("Value must be either numerical or a string containing a wildcard")
+ValueError: Value must be either numerical or a string containing a wildcard
+
+[2024-05-13 15:16:33,656] INFO in _internal: 127.0.0.1 - - [13/May/2024 15:16:33] "[35m[1mPOST /rcs/compare-data HTTP/1.1[0m" 500 -
+[2024-05-13 15:17:05,060] INFO in _internal: 127.0.0.1 - - [13/May/2024 15:17:05] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-13 15:23:13,225] INFO in _internal: 127.0.0.1 - - [13/May/2024 15:23:13] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-13 15:28:53,102] INFO in _internal: 127.0.0.1 - - [13/May/2024 15:28:53] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-13 15:36:08,264] INFO in _internal: 127.0.0.1 - - [13/May/2024 15:36:08] "POST /rcs/compare-data HTTP/1.1" 200 -
+[2024-05-13 15:43:32,288] INFO in _internal: 127.0.0.1 - - [13/May/2024 15:43:32] "POST /rcs/compare-data HTTP/1.1" 200 -
