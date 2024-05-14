@@ -79,16 +79,19 @@ class CompareData(Resource):
                 source_df['Update Checklist'] = source_df['Update Checklist'].astype(str).str.strip()
                 source_df['concat_update_checklist'] = source_df['Update Checklist'].str.lower()
                 source_df['concat_update_checklist'] = source_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_checklist'] = source_df['concat_update_checklist'].str.replace(r'>>>', '', regex=True)
                 source_df['concat_update_checklist'] = source_df['concat_update_checklist'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 source_df['Update peraturan_kewajiban'] = source_df['Update peraturan_kewajiban'].astype(str).str.strip()
                 source_df['concat_update_peraturan_kewajiban'] = source_df['Update peraturan_kewajiban'].str.lower()
                 source_df['concat_update_peraturan_kewajiban'] = source_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_peraturan_kewajiban'] = source_df['concat_update_peraturan_kewajiban'].str.replace(r'>>>', '', regex=True)
                 source_df['concat_update_peraturan_kewajiban'] = source_df['concat_update_peraturan_kewajiban'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 source_df['Update peraturan_sanksi'] = source_df['Update peraturan_sanksi'].astype(str).str.strip()
                 source_df['concat_update_peraturan_sanksi'] = source_df['Update peraturan_sanksi'].str.lower()
                 source_df['concat_update_peraturan_sanksi'] = source_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
+                source_df['concat_update_peraturan_sanksi'] = source_df['concat_update_peraturan_sanksi'].str.replace(r'>>>+', '', regex=True)
                 source_df['concat_update_peraturan_sanksi'] = source_df['concat_update_peraturan_sanksi'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 # source_df['hash'] = source_df.apply(cls.hash_row, axis=1)
@@ -148,16 +151,19 @@ class CompareData(Resource):
                 compare_df['Update Checklist'] = compare_df['Update Checklist'].astype(str).str.strip()
                 compare_df['concat_update_checklist'] = compare_df['Update Checklist'].str.lower()
                 compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'>>>', '', regex=True)
                 compare_df['concat_update_checklist'] = compare_df['concat_update_checklist'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 compare_df['Update peraturan_kewajiban'] = compare_df['Update peraturan_kewajiban'].astype(str).str.strip()
                 compare_df['concat_update_peraturan_kewajiban'] = compare_df['Update peraturan_kewajiban'].str.lower()
                 compare_df['concat_update_peraturan_kewajiban'] = compare_df['concat_update_peraturan_kewajiban'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_peraturan_kewajiban'] = compare_df['concat_update_peraturan_kewajiban'].str.replace(r'>>>', '', regex=True)
                 compare_df['concat_update_peraturan_kewajiban'] = compare_df['concat_update_peraturan_kewajiban'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 compare_df['Update peraturan_sanksi'] = compare_df['Update peraturan_sanksi'].astype(str).str.strip()
                 compare_df['concat_update_peraturan_sanksi'] = compare_df['Update peraturan_sanksi'].str.lower()
                 compare_df['concat_update_peraturan_sanksi'] = compare_df['concat_update_peraturan_sanksi'].str.replace(r'\s+', '', regex=True)
+                compare_df['concat_update_peraturan_sanksi'] = compare_df['concat_update_peraturan_sanksi'].str.replace(r'>>>', '', regex=True)
                 compare_df['concat_update_peraturan_sanksi'] = compare_df['concat_update_peraturan_sanksi'].str.replace(r'@lt\w{13}', '', regex=True)
 
                 # compare_df['hash'] = compare_df.apply(cls.hash_row, axis=1)
