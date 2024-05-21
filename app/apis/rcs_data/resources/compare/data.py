@@ -46,21 +46,30 @@ class CompareData(Resource):
 
                 ## Cleaning the data type of needed column for each dataframe 
                 source_df['Topik'] = source_df['Topik'].astype(str).str.strip()
-                del source_df['Kewajiban']
-                del source_df['Notes']
-                del source_df['Tipe Kewajiban']
-                del source_df['Sanksi'] 
-                del source_df['Checklist']
-                del source_df['peraturan_kewajiban']
-                del source_df['peraturan_sanksi']
-                del source_df['Tag']
-                del source_df['kewajiban_uuid']
-
+                if hasattr(source_df, 'Kewajiban'):
+                    del source_df['Kewajiban']
+                if hasattr(source_df, 'Notes'):
+                    del source_df['Notes']  
+                if hasattr(source_df, 'Tipe Kewajiban'):
+                    del source_df['Tipe Kewajiban']
+                if hasattr(source_df, 'Sanksi'):
+                    del source_df['Sanksi'] 
+                if hasattr(source_df, 'Checklist'):
+                    del source_df['Checklist']
+                if hasattr(source_df, 'peraturan_kewajiban'):
+                    del source_df['peraturan_kewajiban']
+                if hasattr(source_df, 'peraturan_sanksi'):
+                    del source_df['peraturan_sanksi']
+                if hasattr(source_df, 'Tag'):
+                    del source_df['Tag']
+                if hasattr(source_df, 'kewajiban_uuid'):
+                    del source_df['kewajiban_uuid']
                 if hasattr(source_df, 'Latest Publish'):
                     del source_df['Latest Publish'] 
-                
-                del source_df['Update status']
-                del source_df['Update Notes']
+                if hasattr(source_df, 'Update status'):
+                    del source_df['Update status']
+                if hasattr(source_df, 'Update Notes'):
+                    del source_df['Update Notes']   
 
                 # source_df['Update status'] = source_df['Update status'].astype(str)
                 source_df['Update Judul'] = source_df['Update Judul'].astype(str).str.strip()
@@ -107,20 +116,31 @@ class CompareData(Resource):
                 # compare_df['Checklist'] = compare_df['Checklist'].astype(str)
                 # compare_df['peraturan_kewajiban'] = compare_df['peraturan_kewajiban'].astype(str)
                 # compare_df['peraturan_sanksi'] = compare_df['peraturan_sanksi'].astype(str)
-
-                del compare_df['Kewajiban'] 
-                del compare_df['Notes'] 
-                del compare_df['Tipe Kewajiban'] 
-                del compare_df['Sanksi'] 
-                del compare_df['Checklist'] 
-                del compare_df['peraturan_kewajiban'] 
-                del compare_df['peraturan_sanksi']
-                del compare_df['Tag']
-                del compare_df['kewajiban_uuid']     
+                
+                if hasattr(compare_df, 'Kewajiban'):
+                    del compare_df['Kewajiban'] 
+                if hasattr(compare_df, 'Notes'):
+                    del compare_df['Notes'] 
+                if hasattr(compare_df, 'Tipe Kewajiban'):
+                    del compare_df['Tipe Kewajiban'] 
+                if hasattr(compare_df, 'Sanksi'):
+                    del compare_df['Sanksi'] 
+                if hasattr(compare_df, 'Checklist'):
+                    del compare_df['Checklist'] 
+                if hasattr(compare_df, 'peraturan_kewajiban'):
+                    del compare_df['peraturan_kewajiban'] 
+                if hasattr(compare_df, 'peraturan_sanksi'):
+                    del compare_df['peraturan_sanksi']
+                if hasattr(compare_df, 'Tag'):
+                    del compare_df['Tag']
+                if hasattr(compare_df, 'kewajiban_uuid'):
+                    del compare_df['kewajiban_uuid']     
                 if hasattr(compare_df, 'Latest Publish'):
-                    del compare_df['Latest Publish'] 
-                del compare_df['Update status']
-                del compare_df['Update Notes']
+                    del compare_df['Latest Publish']
+                if hasattr(compare_df, 'Update status'): 
+                    del compare_df['Update status']
+                if hasattr(compare_df, 'Update Notes'):
+                    del compare_df['Update Notes']
 
                 # # compare_df['Update status'] = compare_df['Update status'].astype(str)
                 # compare_df['Update Judul'] = compare_df['Update Judul'].astype(str)
